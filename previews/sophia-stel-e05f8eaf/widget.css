@@ -31,6 +31,16 @@
   font-size: var(--ss-size) !important;
 }
 
+/* The list wrapper. Unless minimal is on, Laylo fills it with the drop color
+   at 50% (grey for black) behind a blur. Not in the field list; stable ID. */
+#list-container {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
 #laylo-drop-instructions-container {
   background: transparent !important;
   padding: 0 0 1.6em !important;
@@ -56,6 +66,8 @@
   min-height: 0 !important;
   margin: 0 !important;
   font-size: var(--ss-size) !important;
+  /* Laylo fades rows from white; without this they flash white on load */
+  transition: none !important;
 }
 
 /* Row padding lives on the wrapper around the row content */

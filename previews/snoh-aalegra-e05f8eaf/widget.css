@@ -15,6 +15,16 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
+/* The list wrapper. Unless minimal is on, Laylo fills it with the drop color
+   at 50% behind a blur. Not in the field list; stable ID. */
+#list-container {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
 #laylo-drop-instructions-container {
   background: transparent !important;
 }
@@ -35,7 +45,9 @@
   border-radius: 0 !important;
   box-shadow: none !important;
   backdrop-filter: none !important;
-  margin-bottom: 8px !important;
+  margin: 0 0 8px !important;
+  /* Laylo fades rows from white; without this they flash on load */
+  transition: none !important;
 }
 
 .laylo-stop-row-content {}
