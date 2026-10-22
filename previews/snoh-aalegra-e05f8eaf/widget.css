@@ -1,0 +1,301 @@
+/* Laylo tour widget: Snoh Aalegra (alegendarylove.com/live)
+   Matches the sign-up form currently on her Live page: Inter at 500,
+   paper-toned fields, 1px #686868 outlines, square corners, black buttons.
+   Pair with embed settings: color=0a0a0a  theme=light  background=transparent
+   Palette: ink #0A0A0A  text #000000  secondary #686868  muted #868686
+            field #EAE9E2  page #EDECE5  button text #F8F8F8 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---------- Tour list ---------- */
+
+#laylo-drop-container {
+  background: transparent !important;
+  color: #000000 !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+#laylo-drop-instructions-container {
+  background: transparent !important;
+}
+
+#laylo-drop-choose-a-date {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+.laylo-stop-row {
+  background: #EAE9E2 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  margin-bottom: 8px !important;
+}
+
+.laylo-stop-row-content {}
+
+.laylo-stop-title-column {
+  gap: 16px !important;
+}
+
+.laylo-stop-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+/* City / state line under the venue */
+.laylo-stop-location {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #868686 !important;
+}
+
+/* "NEAR YOU" tag: square black label instead of a tinted pill */
+.laylo-stop-location-tag {
+  background: #0A0A0A !important;
+  border-radius: 0 !important;
+  padding: 2px 6px !important;
+}
+
+.laylo-stop-location-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  color: #F8F8F8 !important;
+}
+
+.laylo-stop-location-pin {
+  display: none !important;
+}
+
+.laylo-stop-button-column {}
+
+.laylo-stop-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
+}
+
+.laylo-stop-button:hover {
+  background: #0A0A0A !important;
+  box-shadow: none !important;
+  filter: brightness(1.25) !important;
+}
+
+/* Large-date badge. Only appears when "large dates" is on for the drop.
+   Not in Laylo's standard field list, but the CSS box accepts it. */
+.laylo-stop-date {
+  background: transparent !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+}
+
+.laylo-stop-date-month {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  color: #868686 !important;
+  text-transform: uppercase !important;
+}
+
+.laylo-stop-date-day {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  color: #000000 !important;
+}
+
+.laylo-stop-date-year {
+  color: #868686 !important;
+}
+
+/* ---------- RSVP card (opens after picking a date) ---------- */
+
+#laylo-rsvp-card-container {
+  background: #EDECE5 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #000000 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+.laylo-rsvp-card-content {}
+
+.laylo-rsvp-header {}
+
+.laylo-rsvp-profile-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  color: #000000 !important;
+}
+
+#laylo-rsvp-card-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+#laylo-rsvp-subtitle {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  color: #686868 !important;
+}
+
+#laylo-rsvp-date {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #686868 !important;
+}
+
+#laylo-rsvp-countdown {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: #686868 !important;
+}
+
+.laylo-rsvp-form {
+  background: #EAE9E2 !important;
+  border-radius: 0 !important;
+}
+
+/* The phone field's outline sits on the form's wrapper */
+div:has(> .laylo-rsvp-form) {
+  background: #EAE9E2 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+}
+
+#laylo-rsvp-submit-button,
+.laylo-rsvp-submit-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+#laylo-rsvp-submit-button:hover,
+.laylo-rsvp-submit-button:hover {
+  background: #0A0A0A !important;
+  filter: brightness(1.25) !important;
+}
+
+/* ---------- After signing up ---------- */
+
+#laylo-completed-subtext {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #686868 !important;
+}
+
+.laylo-completed-share-buttons {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------- Code verification ---------- */
+
+#laylo-verify-enter-code-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+#laylo-verify-sent-to-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  color: #686868 !important;
+}
+
+#laylo-verify-expire-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  color: #868686 !important;
+}
+
+#laylo-resend-code-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #0A0A0A !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+}
+
+/* ---------- Instagram RSVP ---------- */
+
+#laylo-instagram-rsvp-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+#laylo-rsvp-instagram-instructions {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: #868686 !important;
+}
+
+#laylo-instagram-confirmation-text {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: #000000 !important;
+}
+
+#laylo-instagram-subtext {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: #686868 !important;
+}

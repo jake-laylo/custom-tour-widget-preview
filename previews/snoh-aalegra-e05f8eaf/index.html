@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snoh Aalegra · Laylo Widget Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page-bg: #EDECE5;
+    --ink: #0A0A0A;
+    --muted: #686868;
+    --line: rgba(10,10,10,.16);
+    --panel: rgba(234,233,226,.75);
+    --accent: #ff4f00;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background-color: var(--page-bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    color: var(--ink);
+    font: 15px/1.5 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .bar-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .bar-meta { font-size: 13px; color: var(--muted); }
+  .bar-meta a { color: inherit; }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 16px 64px;
+  }
+  .intro {
+    max-width: 680px;
+    margin: 40px auto 24px;
+  }
+  .intro h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .intro p { margin: 0; color: var(--muted); }
+  .stage {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .handoff {
+    max-width: 680px;
+    margin: 48px auto 0;
+    display: grid;
+    gap: 16px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 0;
+  }
+  .panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .panel h2 { margin: 0; font-size: 16px; font-weight: 600; }
+  .panel p { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+  pre {
+    margin: 0;
+    max-height: 280px;
+    overflow: auto;
+    padding: 14px;
+    border-radius: 8px;
+    background: #141414;
+    color: #e9e9e6;
+    font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    white-space: pre;
+  }
+  .copy {
+    flex-shrink: 0;
+    appearance: none;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--page-bg);
+    font: 600 13px/1 'Inter', system-ui, sans-serif;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .copy:hover { opacity: .85; }
+  details summary {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    list-style-position: inside;
+  }
+  details[open] summary { margin-bottom: 12px; }
+  .note {
+    font-size: 13px;
+    color: var(--muted);
+    border-left: 3px solid var(--accent);
+    padding: 2px 0 2px 12px;
+  }
+  .note strong { color: var(--ink); }
+  @media (max-width: 520px) {
+    .intro { margin-top: 28px; }
+    .intro h1 { font-size: 23px; }
+    .panel { padding: 16px; }
+    .panel-head { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+  <header class="bar">
+    <span class="bar-label">Laylo widget preview</span>
+    <span class="bar-meta">Styled for Snoh Aalegra · <a href="https://alegendarylove.com/live" target="_blank" rel="noopener">alegendarylove.com/live</a></span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Snoh Aalegra tour dates</h1>
+      <p>This is the real Laylo widget with Snoh Aalegra's custom styling. Tap a date to try the sign-up flow.</p>
+    </section>
+
+    <section class="stage" aria-label="Live Laylo widget">
+<!-- Laylo embed: start -->
+<script src="https://embed.laylo.com/laylo-sdk.js"></script>
+<iframe
+id="laylo-drop-e05f8eaf-c834-4212-a7f0-0566f1b593dc"
+frameborder="0"
+scrolling="no"
+allow="web-share"
+allowtransparency="true"
+style="width: 1px; min-width: 100%; max-width: 1000px"
+src="https://embed.laylo.com?dropId=e05f8eaf-c834-4212-a7f0-0566f1b593dc&color=0a0a0a&minimal=false&theme=light&background=transparent">
+</iframe><div style="display: flex; justify-content: space-between; align-items: center; gap: 4px; padding: 8px 16px;">
+<a href="https://laylo.com/jake-laylo?utm_source=multidropEmbed&utm_campaign=e05f8eaf-c834-4212-a7f0-0566f1b593dc&utm_medium=profileLink" target="_blank" style="color: inherit; font-size: 10px; font-style: normal; font-weight: 400; line-height: 12px; letter-spacing: 0.2px; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto;text-underline-position: from-font;">Follow jvogter25</a>
+<a href="https://laylo.com/d/e05f8eaf-c834-4212-a7f0-0566f1b593dc?utm_source=multidropEmbed&utm_campaign=e05f8eaf-c834-4212-a7f0-0566f1b593dc&utm_medium=multridropLink" target="_blank" style="color: inherit; font-size: 10px; font-style: normal; font-weight: 400; line-height: 12px; letter-spacing: 0.2px; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto;text-underline-position: from-font;">View on Laylo</a>
+</div>
+<!-- Laylo embed: end -->
+    </section>
+
+    <section class="handoff">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Embed code</h2>
+            <p>Paste this on your site where the tour dates should appear.</p>
+          </div>
+          <button class="copy" type="button" data-copy="embed-code">Copy code</button>
+        </div>
+        <pre id="embed-code">&lt;script src=&quot;https://embed.laylo.com/laylo-sdk.js&quot;&gt;&lt;/script&gt;
+&lt;iframe
+id=&quot;laylo-drop-e05f8eaf-c834-4212-a7f0-0566f1b593dc&quot;
+frameborder=&quot;0&quot;
+scrolling=&quot;no&quot;
+allow=&quot;web-share&quot;
+allowtransparency=&quot;true&quot;
+style=&quot;width: 1px; min-width: 100%; max-width: 1000px&quot;
+src=&quot;https://embed.laylo.com?dropId=e05f8eaf-c834-4212-a7f0-0566f1b593dc&amp;color=0a0a0a&amp;minimal=false&amp;theme=light&amp;background=transparent&quot;&gt;
+&lt;/iframe&gt;&lt;div style=&quot;display: flex; justify-content: space-between; align-items: center; gap: 4px; padding: 8px 16px;&quot;&gt;
+&lt;a href=&quot;https://laylo.com/jake-laylo?utm_source=multidropEmbed&amp;utm_campaign=e05f8eaf-c834-4212-a7f0-0566f1b593dc&amp;utm_medium=profileLink&quot; target=&quot;_blank&quot; style=&quot;color: inherit; font-size: 10px; font-style: normal; font-weight: 400; line-height: 12px; letter-spacing: 0.2px; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto;text-underline-position: from-font;&quot;&gt;Follow jvogter25&lt;/a&gt;
+&lt;a href=&quot;https://laylo.com/d/e05f8eaf-c834-4212-a7f0-0566f1b593dc?utm_source=multidropEmbed&amp;utm_campaign=e05f8eaf-c834-4212-a7f0-0566f1b593dc&amp;utm_medium=multridropLink&quot; target=&quot;_blank&quot; style=&quot;color: inherit; font-size: 10px; font-style: normal; font-weight: 400; line-height: 12px; letter-spacing: 0.2px; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-skip-ink: none; text-decoration-thickness: auto; text-underline-offset: auto;text-underline-position: from-font;&quot;&gt;View on Laylo&lt;/a&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <details class="panel">
+        <summary>Custom CSS (already saved in Laylo)</summary>
+        <div class="panel-head">
+          <p>For reference. This styling lives in Laylo, so nothing extra goes on your site.</p>
+          <button class="copy" type="button" data-copy="custom-css">Copy CSS</button>
+        </div>
+        <pre id="custom-css">/* Laylo tour widget: Snoh Aalegra (alegendarylove.com/live)
+   Matches the sign-up form currently on her Live page: Inter at 500,
+   paper-toned fields, 1px #686868 outlines, square corners, black buttons.
+   Pair with embed settings: color=0a0a0a  theme=light  background=transparent
+   Palette: ink #0A0A0A  text #000000  secondary #686868  muted #868686
+            field #EAE9E2  page #EDECE5  button text #F8F8F8 */
+
+@import url(&#x27;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&#x27;);
+
+/* ---------- Tour list ---------- */
+
+#laylo-drop-container {
+  background: transparent !important;
+  color: #000000 !important;
+  font-family: &#x27;Inter&#x27;, system-ui, -apple-system, sans-serif !important;
+}
+
+#laylo-drop-instructions-container {
+  background: transparent !important;
+}
+
+#laylo-drop-choose-a-date {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+.laylo-stop-row {
+  background: #EAE9E2 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  margin-bottom: 8px !important;
+}
+
+.laylo-stop-row-content {}
+
+.laylo-stop-title-column {
+  gap: 16px !important;
+}
+
+.laylo-stop-title {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+/* City / state line under the venue */
+.laylo-stop-location {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #868686 !important;
+}
+
+/* &quot;NEAR YOU&quot; tag: square black label instead of a tinted pill */
+.laylo-stop-location-tag {
+  background: #0A0A0A !important;
+  border-radius: 0 !important;
+  padding: 2px 6px !important;
+}
+
+.laylo-stop-location-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  color: #F8F8F8 !important;
+}
+
+.laylo-stop-location-pin {
+  display: none !important;
+}
+
+.laylo-stop-button-column {}
+
+.laylo-stop-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
+}
+
+.laylo-stop-button:hover {
+  background: #0A0A0A !important;
+  box-shadow: none !important;
+  filter: brightness(1.25) !important;
+}
+
+/* Large-date badge. Only appears when &quot;large dates&quot; is on for the drop.
+   Not in Laylo&#x27;s standard field list, but the CSS box accepts it. */
+.laylo-stop-date {
+  background: transparent !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+}
+
+.laylo-stop-date-month {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  color: #868686 !important;
+  text-transform: uppercase !important;
+}
+
+.laylo-stop-date-day {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  color: #000000 !important;
+}
+
+.laylo-stop-date-year {
+  color: #868686 !important;
+}
+
+/* ---------- RSVP card (opens after picking a date) ---------- */
+
+#laylo-rsvp-card-container {
+  background: #EDECE5 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #000000 !important;
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+}
+
+.laylo-rsvp-card-content {}
+
+.laylo-rsvp-header {}
+
+.laylo-rsvp-profile-title {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  color: #000000 !important;
+}
+
+#laylo-rsvp-card-title {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+#laylo-rsvp-subtitle {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  color: #686868 !important;
+}
+
+#laylo-rsvp-date {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #686868 !important;
+}
+
+#laylo-rsvp-countdown {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  color: #686868 !important;
+}
+
+.laylo-rsvp-form {
+  background: #EAE9E2 !important;
+  border-radius: 0 !important;
+}
+
+/* The phone field&#x27;s outline sits on the form&#x27;s wrapper */
+div:has(&gt; .laylo-rsvp-form) {
+  background: #EAE9E2 !important;
+  border: 1px solid #686868 !important;
+  border-radius: 0 !important;
+}
+
+#laylo-rsvp-submit-button,
+.laylo-rsvp-submit-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+#laylo-rsvp-submit-button:hover,
+.laylo-rsvp-submit-button:hover {
+  background: #0A0A0A !important;
+  filter: brightness(1.25) !important;
+}
+
+/* ---------- After signing up ---------- */
+
+#laylo-completed-subtext {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #686868 !important;
+}
+
+.laylo-completed-share-buttons {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+}
+
+/* ---------- Code verification ---------- */
+
+#laylo-verify-enter-code-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+#laylo-verify-sent-to-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  color: #686868 !important;
+}
+
+#laylo-verify-expire-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  color: #868686 !important;
+}
+
+#laylo-resend-code-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #0A0A0A !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+}
+
+/* ---------- Instagram RSVP ---------- */
+
+#laylo-instagram-rsvp-button {
+  background: #0A0A0A !important;
+  color: #F8F8F8 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+#laylo-rsvp-instagram-instructions {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  color: #868686 !important;
+}
+
+#laylo-instagram-confirmation-text {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  color: #000000 !important;
+}
+
+#laylo-instagram-subtext {
+  font-family: &#x27;Inter&#x27;, system-ui, sans-serif !important;
+  color: #686868 !important;
+}
+</pre>
+      </details>
+
+      <p class="note"><strong>Heads-up:</strong> signing up on this page is a real RSVP for this drop, so you'll get real texts. This page is a Laylo preview, not Snoh Aalegra's website.</p>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = document.getElementById(btn.getAttribute('data-copy')).textContent;
+        var label = btn.textContent;
+        var done = function () {
+          btn.textContent = 'Copied';
+          setTimeout(function () { btn.textContent = label; }, 1600);
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
+        } else { fallback(text); done(); }
+      });
+    });
+    function fallback(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  </script>
+</body>
+</html>
