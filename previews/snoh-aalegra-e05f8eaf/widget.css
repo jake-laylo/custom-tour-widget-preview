@@ -114,6 +114,9 @@
   height: 40px !important;
   min-height: 40px !important;
   padding: 0 16px !important;
+  /* Laylo animates every property on this button; without this it visibly
+     morphs from the default pill when the custom CSS arrives */
+  transition: filter 0.15s ease !important;
 }
 
 .laylo-stop-button:hover {
