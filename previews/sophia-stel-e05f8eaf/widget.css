@@ -179,7 +179,9 @@ div:has(> .laylo-stop-row-content) {
   color: var(--ss-ink) !important;
 }
 
-.laylo-stop-location-pin {
+/* Hide the pin and its wrapper; an empty wrapper throws off the label's baseline */
+.laylo-stop-location-pin,
+.laylo-stop-location-tag :has(> .laylo-stop-location-pin) {
   display: none !important;
 }
 

@@ -92,7 +92,9 @@
   color: #F8F8F8 !important;
 }
 
-.laylo-stop-location-pin {
+/* Hide the pin and its wrapper; an empty wrapper throws off the label's baseline */
+.laylo-stop-location-pin,
+.laylo-stop-location-tag :has(> .laylo-stop-location-pin) {
   display: none !important;
 }
 
