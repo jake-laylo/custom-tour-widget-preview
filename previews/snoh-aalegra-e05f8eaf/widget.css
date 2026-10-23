@@ -1,9 +1,9 @@
 /* Laylo tour widget: Snoh Aalegra (alegendarylove.com/live)
    Matches the sign-up form currently on her Live page: Inter at 500,
    paper-toned fields, 1px #686868 outlines, square corners, black buttons.
-   Pair with embed settings: color=0a0a0a  theme=light  background=transparent
    Palette: ink #0A0A0A  text #000000  secondary #686868  muted #868686
-            field #EAE9E2  page #EDECE5  button text #F8F8F8 */
+            field #EAE9E2  page #EDECE5  button text #F8F8F8
+   Paste into Custom CSS on the multidrop's Sharing tab (Advanced options), then Save. */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -19,10 +19,21 @@
    at 50% behind a blur. Not in the field list; stable ID. */
 #list-container {
   background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
+}
+
+/* Laylo's default embed code (no transparent background) also outlines the list
+   and washes each row and the open card with a white gradient and blur. */
+.ld2-multidrop-row-unopened,
+#flip-card-inner {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 #laylo-drop-instructions-container {

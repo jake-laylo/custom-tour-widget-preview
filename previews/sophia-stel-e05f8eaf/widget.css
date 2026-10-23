@@ -2,9 +2,7 @@
    Matches her tour list: Times New Roman throughout, lowercase dates and venues
    with wide tracking, grey cities, and a "TICKETS ->" link set between two hairlines.
    Sizes follow her site's scale: 12px in a desktop column, 15px when the widget is phone-narrow.
-   Pair with embed settings: color=000000  theme=light  background=transparent
-                             customFontUrl=<Tinos woff2, same file her homepage embed uses>
-   Works best with "large dates" on, so each stop reads "mar 4" above the venue. */
+   Paste into Custom CSS on the multidrop's Sharing tab (Advanced options), then Save. */
 
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
 
@@ -35,10 +33,21 @@
    at 50% (grey for black) behind a blur. Not in the field list; stable ID. */
 #list-container {
   background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
+}
+
+/* Laylo's default embed code (no transparent background) also outlines the list
+   and washes each row and the open card with a white gradient and blur. */
+.ld2-multidrop-row-unopened,
+#flip-card-inner {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 #laylo-drop-instructions-container {
